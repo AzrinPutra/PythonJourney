@@ -4,7 +4,8 @@
 
 class ContactList(list):
     """ Return all contacts that contains the search value 
-    in their name.
+    in their name. Since list is specified, an instance of
+    this class will create a list
     """
     def search(self, name):
         matching_contacts = []
@@ -30,6 +31,21 @@ class Friend(Contact):
     def __init__(self, name, email, phone):
         super().__init__(name, email)
         self.phone = phone
+
+class AddressHolder:
+    def __init__(self, street, city, state, code):
+        self.street = street
+        self.city = city
+        self.state = state
+        self.code = code
+        
+class MailSender:
+    def send_mail(self, message):
+        print("Sending mail to " + self.email)
+        # Add email logic here
+        
+class EmaliableContact(Contact, MailSender):
+    pass
         
 class Supplier(Contact):
     """What if we have suppliers in our contacts that
