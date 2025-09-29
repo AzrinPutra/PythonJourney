@@ -27,7 +27,7 @@ class Apartment(Property):
     valid_balcony=("yes", "no", "solarium")
     valid_laundry=("coin", "ensuite", "none")
     
-    def __init__
+    def __init__(self, balcony='', laundry='',w)
     
     
     
