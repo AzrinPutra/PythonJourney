@@ -15,7 +15,7 @@ class Product:
             
     def apply_discount(self):
         if "discount" in self.extra_att:
-            discount_percent = self.extra_att("discount")
+            discount_percent = self.extra_att['discount']
             self.price = self.price * (1 - discount_percent / 100)
             print(f"New discounted price: {self.price}")
         else:
