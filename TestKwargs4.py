@@ -23,11 +23,11 @@ class Product:
            
 class Electronics(Product):
     def __init__(self, name='', price=None , warranty='', **kwargs):
-        super().__init__(name=name, price=price)
+        super().__init__(name=name, price=price, **kwargs)
         self.warranty = warranty
         
 class Clothing(Product):
     def __init__(self, name='', price=None, size='', **kwargs):
-        super().__init__(name=name, price=price)
+        super().__init__(name=name, price=price, **kwargs)
         self.size = size
         
